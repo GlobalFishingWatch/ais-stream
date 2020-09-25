@@ -1,0 +1,10 @@
+[
+    {
+        "name": "message_body",
+        "type": "STRING"
+    },
+    {
+        "name": "publish_time",
+        "type": "TIMESTAMP"
+    }
+]

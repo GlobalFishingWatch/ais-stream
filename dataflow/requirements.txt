@@ -1,0 +1,3 @@
+https://codeload.github.com/GlobalFishingWatch/pipe-tools/tar.gz/895a97ce7a6addf0cb56b536f4c98bb0cac2456a#egg=pipe-tools
+https://codeload.github.com/GlobalFishingWatch/ais-tools/tar.gz/f11a824b1050be517b145d1c967beeac6e9d74ee#egg=ais-tools
+
