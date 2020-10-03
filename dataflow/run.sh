@@ -12,7 +12,7 @@ JOB_NAME=ais-stream-decode-$(date +%Y%m%d%H%M%S)
 
 python stream_decode \
   --job_name=${JOB_NAME} \
-  ${REMOTE_OPTS} \
+  ${LOCAL_OPTS} \
   --streaming \
   --diskSizeGb=50 \
   --usePublicIps=false \
@@ -20,8 +20,7 @@ python stream_decode \
   --log_args \
   --project=${GCP_PROJECT} \
   --region=us-central1 \
-  --input_topic=${PUBSUB_TOPIC} \
-  --output_path=${OUTPUT_PATH} \
+  --input_table=${INPUT_TABLE} \
   --output_table=${OUTPUT_TABLE} \
   --schema=@${THIS_SCRIPT_DIR}/bigquery-schema.json \
   --window_size=1 \
@@ -29,4 +28,4 @@ python stream_decode \
   --requirements_file=${THIS_SCRIPT_DIR}/requirements.txt \
   --setup_file=${THIS_SCRIPT_DIR}/setup.py \
 
-
+#   --input_topic=${PUBSUB_TOPIC} \

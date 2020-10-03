@@ -12,11 +12,15 @@ class DecodeOptions(PipelineOptions):
         required = parser.add_argument_group('Required')
         optional = parser.add_argument_group('Optional')
 
-        required.add_argument(
+        optional.add_argument(
             "--input_topic",
-            required=True,
             help="The Cloud Pub/Sub topic to read from.\n"
                  '"projects/<PROJECT_NAME>/topics/<TOPIC_NAME>".',
+        )
+        optional.add_argument(
+            "--input_table",
+            help="The Bigquery table to read from.\n"
+                 '"<PROJECT_NAME>:<DATASET>.<TABLE>"',
         )
         required.add_argument(
             "--window_size",

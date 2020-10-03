@@ -13,12 +13,11 @@ class DecodeNMEA(beam.DoFn):
         self.schema = schema
         self.source = source
 
-    def process(self, element):
+    def process(self, message):
         """Decode the nmea element in the message body
         """
 
-        logging.info('decoding element {}'.format(element))
-        message = Message(element.decode("utf-8"))
+        logging.info('decoding element {}'.format(message))
         message.update(self.decoder.safe_decode(message.get('nmea')))
         message.add_source(self.source)
         message.add_uuid()
